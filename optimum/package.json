@@ -1,0 +1,60 @@
+{
+  "name": "orderfulfillment",
+  "version": "0.1.0",
+  "private": true,
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{scss,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "ENV=development next dev",
+    "build": "next build",
+    "build-start": "npm run build && next dev",
+    "start-dev": "ENV=development npm run build-start",
+    "start-stage": "ENV=stage npm run build-start",
+    "start-prod": "ENV=production npm run build-start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "test": "npx lint-staged",
+    "prettier": "prettier --write"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/node": "20.4.9",
+    "@types/react": "18.2.19",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.5.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.13",
+    "lucide-react": "^0.265.0",
+    "next": "13.4.13",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.2",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "3.3.3",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "5.1.6",
+    "zustand": "^4.4.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1"
+  }
+}
